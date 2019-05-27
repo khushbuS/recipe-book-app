@@ -1,3 +1,21 @@
-<p>
-  header works!
-</p>
+<div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-4-phone">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-phone">Recipe Book</div>
+            <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-3-tablet mdc-layout-grid__cell--span-4-phone">Recipes</div>
+            <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-phone">Shopping List</div>
+          </div>
+        </div>
+        <div class="mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-phone">
+          <mat-form-field>
+            <mat-label>Manage</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let option of options" [value]="option.value">
+                {{option.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        </div>
+</div>
